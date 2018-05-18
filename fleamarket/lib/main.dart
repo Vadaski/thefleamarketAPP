@@ -5,7 +5,7 @@ void main() {
   runApp(new MaterialApp(
     debugShowCheckedModeBanner: false,
     title: 'Fleamarket',
-    home: new SplashScreen(),
+    home: new HomeScreen(),
   ));
 //runApp(new MyButton());
 }

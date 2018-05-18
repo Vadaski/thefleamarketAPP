@@ -25,7 +25,7 @@ class SplashState extends State<SplashScreen> with TickerProviderStateMixin {
             (route) => route == null);
       }
     };
-    //注册动画观察者
+
     animation.addStatusListener((status) => animationStateListener(status));
     //启动动画
     controller.forward();
@@ -35,6 +35,7 @@ class SplashState extends State<SplashScreen> with TickerProviderStateMixin {
     return new FadeTransition(
         opacity: animation,
         child: new Image.network(
+          //TODO:从服务器获取一张图片，默认一张本地图片
           'http://pic.baike.soso.com/p/20130828/20130828161137-1346445960.jpg',
           scale: 2.0,
         ));
