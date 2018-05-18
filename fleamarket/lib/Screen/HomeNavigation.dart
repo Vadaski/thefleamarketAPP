@@ -8,6 +8,8 @@ class HomeNavigation extends StatefulWidget {
 class HomeNavigationState extends State<HomeNavigation>{
   @override
   Widget build(BuildContext context) {
-    return new BottomNavigationBar(items: null);
+    return new BottomNavigationBar(
+        items: null
+    );
   }
 }
