@@ -34,11 +34,19 @@ class SplashState extends State<SplashScreen> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return new FadeTransition(
         opacity: animation,
-        child: new Image.network(
-          //TODO:从服务器获取一张图片，默认一张本地图片
-          'http://pic.baike.soso.com/p/20130828/20130828161137-1346445960.jpg',
-          scale: 2.0,
-        ));
+//        child: new Image.network(
+//          //TODO:从服务器获取一张图片，默认一张本地图片
+//          'http://pic.baike.soso.com/p/20130828/20130828161137-1346445960.jpg',
+//          scale: 2.0,
+//          fit:BoxFit.cover
+//        )
+          child: new Image.asset(
+              'images/startscreen.jpg',
+              scale: 2.0,
+            fit: BoxFit.cover,
+          ),
+
+    );
   }
 
   dispose() {
