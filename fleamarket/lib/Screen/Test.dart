@@ -1,73 +1,99 @@
 import 'package:flutter/material.dart';
 
-
-class SplashScreen extends StatefulWidget {
+class HomeNavigateScreen extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() => new SplashState();
+  State<StatefulWidget> createState() => new HomeNavigateScreenState();
 }
 
-class SplashState extends State<SplashScreen> with TickerProviderStateMixin {
-  // 动画
-  Animation animation;
+class HomeNavigateScreenState extends State<HomeNavigateScreen> with SingleTickerProviderStateMixin{
 
-  // 动画管理器
-  AnimationController controller;
+  int _currentIndex = 1;
+  BottomNavigationBarType _Type = BottomNavigationBarType.fixed;
+  List<NavigationIconView> _navigationViews;
 
-  var animationStateListener;
 
-  initState() {
+  void initState() {
+    // TODO: implement initState
     super.initState();
-    //初始化动画管理器
-    controller = new AnimationController(
-        duration: const Duration(milliseconds: 1500), vsync: this);
-    //初始化动画
-    animation = new Tween(begin: 0.0, end: 1.0).animate(controller);
-    animationStateListener = (status) {
-      if (status == AnimationStatus.completed) {
-        Navigator.of(context).pushAndRemoveUntil(
-            new MaterialPageRoute(builder: (context) => new HomeScreen()),
-            (route) => route == null);
-      }
-    };
-    //注册动画观察者
-    animation.addStatusListener((status) => animationStateListener(status));
-    //启动动画
-    controller.forward();
+    _navigationViews = <NavigationIconView>[
+      new NavigationIconView(
+        icon: new Icon(Icons.home),
+        title: new Text('主页'),
+        color: Colors.orangeAccent,
+        vsync: this,
+      ),
+      new NavigationIconView(
+        icon: new Icon(Icons.shopping_basket),
+        title: new Text('背包'),
+        color: Colors.orangeAccent,
+        vsync: this,
+      ),new NavigationIconView(
+        icon: new Icon(Icons.account_circle),
+        title: new Text('主页'),
+        color: Colors.orangeAccent,
+        vsync: this,
+      ),
+    ];
+    for (NavigationIconView view in _navigationViews)
+      view.controller.addListener(_rebuild);
+    _navigationViews[_currentIndex].controller.value = 1.0;
   }
-
-  /// 观察动画状态,在结束的时候启动到新的页面,
-  /// 这里使用的是`pushAndRemoveUntil`而不是`push`
-  /// 因为闪屏页跳转之后需要销毁,而`pushAndRemoveUntil`会删除之前的所有页面,只留下跳转的那个
-
-  Widget build(BuildContext context) {
-    return new FadeTransition(
-        opacity: animation,
-        child: new Image.network(
-          'http://pic.baike.soso.com/p/20130828/20130828161137-1346445960.jpg',
-          scale: 2.0,
-        ));
-  }
-
-  dispose() {
-    controller.removeStatusListener(animationStateListener);
-    controller.dispose();
+  @override
+  void dispose() {
     super.dispose();
+    for (NavigationIconView view in _navigationViews)
+      view.controller.dispose();
   }
-}
+  void _rebuild() {
+    setState((){
+    });
+  }
 
-class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      title: "testHome",
-      home: new Scaffold(
-        appBar: new AppBar(
-          title: new Text("testhome"),
-        ),
-        body: new Center(
-          child: new Text("HOMESCREEN"),
-        ),
-      ),
+    return new BottomNavigationBar(
+      items: _navigationViews
+        .map((NavigationIconView navigationView) => navigationView.item)
+        .toList(),
+      currentIndex: _currentIndex,
+      type: _Type,
+      onTap: (int index){
+        setState(() {
+          _navigationViews[_currentIndex].controller.reverse();
+          _currentIndex = index;
+          _navigationViews[_currentIndex].controller.forward();
+        });
+      },
     );
   }
-}
+
+  }
+
+
+class NavigationIconView {
+  final Widget _icon;
+  final Color _color;
+  final BottomNavigationBarItem item;
+  final AnimationController controller;
+  CurvedAnimation _animation;
+  NavigationIconView({
+    Widget icon,
+    Widget title,
+    Color color,
+    TickerProvider vsync,
+  }):_icon = icon,
+        _color = color,
+        item = new BottomNavigationBarItem(
+            icon: icon,
+            title: title
+        ),
+        controller = new AnimationController(
+          duration: kThemeAnimationDuration,
+          vsync: vsync,
+        ) {
+    _animation = new CurvedAnimation(
+      parent: controller,
+      curve: new Interval(0.5, 1.0, curve: Curves.fastOutSlowIn),
+    );
+  }
+  }

@@ -79,20 +79,6 @@
             </list>
           </value>
         </entry>
-        <entry key="cupertino_icons">
-          <value>
-            <list>
-              <option value="C:/Program Files/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-0.1.2/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="english_words">
-          <value>
-            <list>
-              <option value="C:/Program Files/flutter/.pub-cache/hosted/pub.dartlang.org/english_words-3.1.0/lib" />
-            </list>
-          </value>
-        </entry>
         <entry key="flutter">
           <value>
             <list>
@@ -118,13 +104,6 @@
           <value>
             <list>
               <option value="C:/Program Files/flutter/.pub-cache/hosted/pub.dartlang.org/glob-1.1.5/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="google_sign_in">
-          <value>
-            <list>
-              <option value="C:/Program Files/flutter/.pub-cache/hosted/pub.dartlang.org/google_sign_in-3.0.3/lib" />
             </list>
           </value>
         </entry>
@@ -366,6 +345,13 @@
             </list>
           </value>
         </entry>
+        <entry key="transparent_image">
+          <value>
+            <list>
+              <option value="C:/Program Files/flutter/.pub-cache/hosted/pub.dartlang.org/transparent_image-0.1.0/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="typed_data">
           <value>
             <list>
@@ -422,11 +408,8 @@
       <root url="file://C:/Program Files/flutter/.pub-cache/hosted/pub.dartlang.org/convert-2.0.1/lib" />
       <root url="file://C:/Program Files/flutter/.pub-cache/hosted/pub.dartlang.org/crypto-2.0.2+1/lib" />
       <root url="file://C:/Program Files/flutter/.pub-cache/hosted/pub.dartlang.org/csslib-0.14.1/lib" />
-      <root url="file://C:/Program Files/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-0.1.2/lib" />
-      <root url="file://C:/Program Files/flutter/.pub-cache/hosted/pub.dartlang.org/english_words-3.1.0/lib" />
       <root url="file://C:/Program Files/flutter/.pub-cache/hosted/pub.dartlang.org/front_end-0.1.0-alpha.9/lib" />
       <root url="file://C:/Program Files/flutter/.pub-cache/hosted/pub.dartlang.org/glob-1.1.5/lib" />
-      <root url="file://C:/Program Files/flutter/.pub-cache/hosted/pub.dartlang.org/google_sign_in-3.0.3/lib" />
       <root url="file://C:/Program Files/flutter/.pub-cache/hosted/pub.dartlang.org/html-0.13.3/lib" />
       <root url="file://C:/Program Files/flutter/.pub-cache/hosted/pub.dartlang.org/http-0.11.3+16/lib" />
       <root url="file://C:/Program Files/flutter/.pub-cache/hosted/pub.dartlang.org/http_multi_server-2.0.4/lib" />
@@ -460,6 +443,7 @@
       <root url="file://C:/Program Files/flutter/.pub-cache/hosted/pub.dartlang.org/string_scanner-1.0.2/lib" />
       <root url="file://C:/Program Files/flutter/.pub-cache/hosted/pub.dartlang.org/term_glyph-1.0.0/lib" />
       <root url="file://C:/Program Files/flutter/.pub-cache/hosted/pub.dartlang.org/test-0.12.34/lib" />
+      <root url="file://C:/Program Files/flutter/.pub-cache/hosted/pub.dartlang.org/transparent_image-0.1.0/lib" />
       <root url="file://C:/Program Files/flutter/.pub-cache/hosted/pub.dartlang.org/typed_data-1.1.5/lib" />
       <root url="file://C:/Program Files/flutter/.pub-cache/hosted/pub.dartlang.org/utf-0.9.0+4/lib" />
       <root url="file://C:/Program Files/flutter/.pub-cache/hosted/pub.dartlang.org/vector_math-2.0.6/lib" />

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fleamarket/Screen/HomeScreen.dart';
+import 'package:fleamarket/Screen/HomeNavigatorScreen.dart';
 
 class SplashScreen extends StatefulWidget {
   @override

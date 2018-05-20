@@ -12,17 +12,14 @@ public class Goods {
      Image image;
      int cCount;
 
-//    public Goods(int id, int sellerid, String name, String info, int price, String type, Image image) {
-//        this.id = id;
-//        this.sellerid = sellerid;
-//        this.name = name;
-//        this.info = info;
-//        this.price = price;
-//        this.type = type;
-//        this.image = image;
-//    }
-
-    public Goods(String name){
+    public Goods(int sellerid, String name, String info, int price, String type, Image image) {
+        this.sellerid = sellerid;
         this.name = name;
+        this.info = info;
+        this.price = price;
+        this.type = type;
+        this.image = image;
     }
+
+    
 }
