@@ -48,7 +48,8 @@ class HomeScreenState extends State<HomeScreen> {
           backgroundColor: Colors.orangeAccent,
           child: new Icon(Icons.add),
           onPressed: () {
-            _openNewPage();
+//            _openNewPage();
+            Navigator.of(context).pushNamed('/ReleaseScreen');
           }),
       body: new RefreshIndicator(
           child: new ListView(

@@ -1,5 +1,8 @@
+import 'dart:async';
+import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
 class ProfileScreen extends StatefulWidget {
 //  const ProfileScreen({Key key}) : super(Key: key);
@@ -10,6 +13,15 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class ProfileScreenState extends State<ProfileScreen> {
+  File _image;
+
+  Future getImage() async {
+    var image = await ImagePicker.pickImage(source: ImageSource.gallery);
+    setState(() {
+      _image = image;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -30,13 +42,19 @@ class ProfileScreenState extends State<ProfileScreen> {
                   SizedBox(height: 48.0),
                   new Row(
                     children: <Widget>[
-                      SizedBox(width: 24.0,),
+                      SizedBox(
+                        width: 24.0,
+                      ),
                       new Container(
                         width: 92.0,
                         height: 92.0,
-                        child: new CircleAvatar(
-                          backgroundImage: new AssetImage('images/touxiang.gif'),
-                          radius: 100.0,
+                        child: new GestureDetector(
+                          child: new CircleAvatar(
+                            backgroundImage:
+                                new AssetImage('images/touxiang.gif'),
+                            radius: 100.0,
+                          ),
+                          onLongPress: getImage,
                         ),
                       ),
                     ],
@@ -61,6 +79,7 @@ class ProfileScreenState extends State<ProfileScreen> {
               ),
             ],
           )
+
         ],
       ),
     );

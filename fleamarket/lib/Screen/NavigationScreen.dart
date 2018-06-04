@@ -7,6 +7,7 @@ import 'package:fleamarket/Screen/SearchScreen.dart';
 import 'package:fleamarket/TestScreen/ShowSearchResultScreen.dart';
 import 'package:fleamarket/TestScreen/ImagePickerTestScreen.dart';
 import 'package:fleamarket/TestScreen/FriendlyChat.dart';
+import 'package:fleamarket/Screen/ReleaseScreen.dart';
 
 class NavigationScreen extends StatefulWidget {
   static const String routeName ='/Navigate';
@@ -28,8 +29,9 @@ class NavigationScreenState extends State<NavigationScreen> {
         '/SearchScreen':(BuildContext context) => new SearchScreen(),
         '/LoginScreen': (BuildContext context) => new LoginPage(),
         '/ShowSearchResultScreen': (BuildContext context) => new ShowSearchResultScreen(),
-        '/imagePickerTestScreen': (BuildContext context) => new MyHomePage(),
+        '/imagePickerTestScreen': (BuildContext context) => new PickImageScreen(),
         '/ChatScreen': (BuildContext context) => new FriendlyChat(),
+        '/ReleaseScreen': (BuildContext context) => new ReleaseScreen(),
       },
       home: new Scaffold(
         backgroundColor: Colors.grey,

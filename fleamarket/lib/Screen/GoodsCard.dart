@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:fleamarket/Screen/ShowGoodsScreen.dart';
 
-class GoodsCard extends StatefulWidget {
-  @override
-  State<StatefulWidget> createState() => new GoodsCardState();
-}
 
-class GoodsCardState extends State<GoodsCard> {
+
+class GoodsCard extends StatelessWidget {
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +13,12 @@ class GoodsCardState extends State<GoodsCard> {
       padding: const EdgeInsets.all(8.0),
       child: new GestureDetector(
         onTap: (){
-          _openNewPage();
+          Navigator.of(context).push(new MaterialPageRoute<Null>(
+            builder: (BuildContext context) {
+              return new ShowGoodsScreen();
+            },
+          )
+          );
         },
         child: new Card(
             elevation: 8.0,
@@ -34,14 +38,6 @@ class GoodsCardState extends State<GoodsCard> {
       ),
     );
   }
-  void _openNewPage() {
-    setState(() {
-      Navigator.of(context).push(new MaterialPageRoute<Null>(
-        builder: (BuildContext context) {
-          return new ShowGoodsScreen();
-        },
-      ));
-    });
-  }
+
 
 }

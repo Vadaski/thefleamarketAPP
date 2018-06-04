@@ -4,12 +4,12 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
-class MyHomePage extends StatefulWidget {
+class PickImageScreen extends StatefulWidget {
   @override
-  _MyHomePageState createState() => new _MyHomePageState();
+  _PickImageScreenState createState() => new _PickImageScreenState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _PickImageScreenState extends State<PickImageScreen> {
   File _image;
 
   Future getImage() async {
@@ -24,6 +24,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
+        backgroundColor: Colors.amberAccent,
         title: new Text('Image Picker Example'),
       ),
       body: new Center(

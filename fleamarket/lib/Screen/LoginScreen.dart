@@ -68,6 +68,7 @@ class _LoginPageState extends State<LoginPage> {
                   borderRadius:  BorderRadius.circular(30.0),
                   child: new RaisedButton(
                     onPressed: () {
+                      if(_usernameController.text.length>0&&_passwordController.text.length>0)
                       Navigator.pop(context);
                     },
                     child: Text('Login'),
