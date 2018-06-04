@@ -18,6 +18,7 @@ class _PickImageScreenState extends State<PickImageScreen> {
     setState(() {
       _image = image;
     });
+    Navigator.of(context).pushNamed('/ReleaseScreen');
   }
 
   @override

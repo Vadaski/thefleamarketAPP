@@ -49,7 +49,7 @@ class HomeScreenState extends State<HomeScreen> {
           child: new Icon(Icons.add),
           onPressed: () {
 //            _openNewPage();
-            Navigator.of(context).pushNamed('/ReleaseScreen');
+            Navigator.of(context).pushNamed('/ImagePickerScreen');
           }),
       body: new RefreshIndicator(
           child: new ListView(
