@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fleamarket/Screen/ShowGoodsScreen.dart';
 
 class GoodsCard extends StatefulWidget {
   @override
@@ -6,49 +7,41 @@ class GoodsCard extends StatefulWidget {
 }
 
 class GoodsCardState extends State<GoodsCard> {
+
   @override
   Widget build(BuildContext context) {
-    return new Container(
-      width: double.infinity,
-      height: 350.0,
-      child: new Card(
-        color: Colors.teal,
-        elevation: 350.0,
-        child: new Container(
-          child: new Column(
-            children: <Widget>[
-              new Container(
-                width: double.infinity,
-                height: 250.0,
-                color: Colors.blue,
-                //TODO:这里需要一张图片
-              ),
-              new Row(
-                children: <Widget>[
-                  new Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: new Container(
-                      width: 75.0,
-                      height: 75.0,
-                      color: Colors.amber,
-                      child: new Center(),
-                    ),
-                  ),
-                  new Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: new Container(
-                      width: 290.0,
-                      height: 75.0,
-                      color: Colors.amber,
-                      child: new Center(),
-                    ),
-                  )
-                ],
-              )
-            ],
+    return  new Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: new GestureDetector(
+        onTap: (){
+          _openNewPage();
+        },
+        child: new Card(
+            elevation: 8.0,
+            child: new Column(
+              children: <Widget>[
+                new Container(
+                  child: new Image.asset('images/goods4.jpg'),
+                ),
+//                new Divider(),
+                new ListTile(
+                  title: new Text('Title'),
+                  subtitle: new Text('subTitle'),
+                )
+              ],
+            ),
           ),
-        ),
       ),
     );
   }
+  void _openNewPage() {
+    setState(() {
+      Navigator.of(context).push(new MaterialPageRoute<Null>(
+        builder: (BuildContext context) {
+          return new ShowGoodsScreen();
+        },
+      ));
+    });
+  }
+
 }

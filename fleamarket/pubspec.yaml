@@ -8,6 +8,12 @@ dependencies:
   transparent_image: ^0.1.0
   json_serializable: ^0.5.0
   build_runner: ^0.8.7
+  sqflite: any
+  cupertino_icons: ^0.1.0
+  shrine_images: 1.0.0
+  intl: ^0.15.6
+  image_picker: ^0.4.4
+
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -35,6 +41,18 @@ flutter:
   uses-material-design: true
   assets:
     - images/startscreen.jpg
+    - images/start.jpg
+    - images/goods1.jpg
+    - images/goods2.jpg
+    - images/goods03.jpg
+    - images/goods4.jpg
+    - images/logo.png
+    - images/profile.jpg
+    - images/profileimage.png
+    - images/touxiang.gif
+
+
+
   # To add assets to your application, add an assets section, like this:
   # assets:
   #  - images/a_dot_burr.jpeg

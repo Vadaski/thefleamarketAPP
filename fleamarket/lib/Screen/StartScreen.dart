@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fleamarket/Screen/HomeNavigation.dart';
-
+import 'package:fleamarket/Screen/NavigationScreen.dart';
 class SplashScreen extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => new SplashState();
@@ -21,7 +20,8 @@ class SplashState extends State<SplashScreen> with TickerProviderStateMixin {
     animationStateListener = (status) {
       if (status == AnimationStatus.completed) {
         Navigator.of(context).pushAndRemoveUntil(
-            new MaterialPageRoute(builder: (context) => new NavigationScreen()),
+            new MaterialPageRoute(builder: (context) => new NavigationScreen()
+            ),
             (route) => route == null);
       }
     };
@@ -35,7 +35,7 @@ class SplashState extends State<SplashScreen> with TickerProviderStateMixin {
     return new FadeTransition(
       opacity: animation,
       child: new Image.asset(
-        'images/startscreen.jpg',
+        'images/start.jpg',
         scale: 2.0,
         fit: BoxFit.cover,
       ),

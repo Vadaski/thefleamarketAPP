@@ -1,6 +1,9 @@
 <component name="libraryTable">
   <library name="Flutter Plugins" type="FlutterPluginsLibraryType">
-    <CLASSES />
+    <CLASSES>
+      <root url="file://C:/Program Files/flutter/.pub-cache/hosted/pub.flutter-io.cn/sqflite-0.8.9" />
+      <root url="file://C:/Program Files/flutter/.pub-cache/hosted/pub.flutter-io.cn/image_picker-0.4.4" />
+    </CLASSES>
     <JAVADOC />
     <SOURCES />
   </library>

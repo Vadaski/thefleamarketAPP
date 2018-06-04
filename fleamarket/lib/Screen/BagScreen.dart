@@ -6,7 +6,13 @@ class BagScreen extends StatelessWidget{
     return new Scaffold(
       appBar: new AppBar(
         title: new Text('BagScreen'),
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.orangeAccent,
+        centerTitle: true,
+      ),
+      body: new Column(
+        children: <Widget>[
+          new Image.asset(''),
+        ],
       ),
     );
   }
