@@ -13,8 +13,7 @@ class _PickImageScreenState extends State<PickImageScreen> {
   File _image;
 
   Future getImage() async {
-    var image = await ImagePicker.pickImage(
-        source: ImageSource.gallery);
+    var image = await ImagePicker.pickImage(source: ImageSource.gallery);
     setState(() {
       _image = image;
     });
@@ -25,8 +24,9 @@ class _PickImageScreenState extends State<PickImageScreen> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        backgroundColor: Colors.amberAccent,
-        title: new Text('Image Picker Example'),
+        backgroundColor: Colors.orangeAccent,
+        title: new Text('Select Goods'),
+        centerTitle: true,
       ),
       body: new Center(
         child: _image == null
@@ -36,7 +36,10 @@ class _PickImageScreenState extends State<PickImageScreen> {
       floatingActionButton: new FloatingActionButton(
         onPressed: getImage,
         tooltip: 'Pick Image',
-        child: new Icon(Icons.add_a_photo),
+        child: new Icon(
+          Icons.add_a_photo,
+        ),
+        backgroundColor: Colors.orangeAccent,
       ),
     );
   }

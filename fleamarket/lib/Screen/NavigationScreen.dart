@@ -5,10 +5,10 @@ import 'package:fleamarket/Screen/ProfileScreen.dart';
 import 'package:fleamarket/Screen/LoginScreen.dart';
 import 'package:fleamarket/Screen/SearchScreen.dart';
 import 'package:fleamarket/TestScreen/ShowSearchResultScreen.dart';
-import 'package:fleamarket/TestScreen/ImagePickerTestScreen.dart';
+import 'package:fleamarket/Screen/ImagePickerTestScreen.dart';
 import 'package:fleamarket/TestScreen/FriendlyChat.dart';
 import 'package:fleamarket/Screen/ReleaseScreen.dart';
-import 'package:fleamarket/TestScreen/ImagePickerTestScreen.dart';
+import 'package:fleamarket/Screen/ImagePickerTestScreen.dart';
 
 class NavigationScreen extends StatefulWidget {
   static const String routeName ='/Navigate';
