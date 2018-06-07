@@ -25,11 +25,11 @@ class ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      appBar: new AppBar(
-        title: new Text('ProfileScreen'),
-        backgroundColor: Colors.orangeAccent,
-        centerTitle: true,
-      ),
+//      appBar: new AppBar(
+//        title: new Text('ProfileScreen'),
+//        backgroundColor: Colors.orangeAccent,
+//        centerTitle: true,
+//      ),
       body: new Column(
         children: <Widget>[
           new Stack(
@@ -57,29 +57,50 @@ class ProfileScreenState extends State<ProfileScreen> {
                           onLongPress: getImage,
                         ),
                       ),
+                      SizedBox(
+                        width: 24.0,
+                      ),
+                      new Container(
+                        child: new Column(
+                          children: <Widget>[
+                            new Text(
+                              'LitaVadaski',
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                color: Colors.white
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 ],
               ),
             ],
           ),
-          new Column(
-            children: <Widget>[
-              new ListTile(
-                title: Text('我的商品'),
-                subtitle: Text('点击查看'),
-              ),
-              new ListTile(
-                title: Text('我的购物车'),
-                subtitle: Text('点击查看'),
-              ),
-              new ListTile(
-                title: Text('我的订单'),
-                subtitle: Text('点击查看'),
-              ),
-            ],
+          new Expanded(
+            child: new ListView(
+              children: <Widget>[
+                new ListTile(
+                  title: Text('我发布的商品'),
+                  subtitle: Text('点击查看'),
+                ),
+                new ListTile(
+                  title: Text('我买到的'),
+                  subtitle: Text('点击查看'),
+                ),
+                new ListTile(
+                  title: Text('我卖出的商品'),
+                  subtitle: Text('点击查看'),
+                ),
+                new ListTile(
+                  title: Text('我的订单'),
+                  subtitle: Text('点击查看'),
+                ),
+              ],
+            ),
           )
-
         ],
       ),
     );

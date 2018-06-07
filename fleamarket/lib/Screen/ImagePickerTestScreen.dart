@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:fleamarket/Screen/ReleaseScreen.dart';
 
 class PickImageScreen extends StatefulWidget {
   @override
@@ -17,8 +18,17 @@ class _PickImageScreenState extends State<PickImageScreen> {
     setState(() {
       _image = image;
     });
-    Navigator.of(context).pushNamed('/ReleaseScreen');
+//    Navigator.of(context).pushNamed('/ReleaseScreen');
+    Navigator.of(context).push(
+        new MaterialPageRoute(
+            builder: (_){
+              return new ReleaseScreen(image: _image,);
+            }
+        )
+    );
   }
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +40,7 @@ class _PickImageScreenState extends State<PickImageScreen> {
       ),
       body: new Center(
         child: _image == null
-            ? new Text('No image selected.')
+            ? new Text('请选择你要发布的商品照片')
             : new Image.file(_image),
       ),
       floatingActionButton: new FloatingActionButton(

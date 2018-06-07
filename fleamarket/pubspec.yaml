@@ -5,14 +5,12 @@ dependencies:
   flutter:
     sdk: flutter
   http: ^0.11.3+16
-  transparent_image: ^0.1.0
   json_serializable: ^0.5.0
   build_runner: ^0.8.7
-  sqflite: any
   cupertino_icons: ^0.1.0
-  shrine_images: 1.0.0
   intl: ^0.15.6
   image_picker: ^0.4.4
+  carousel: ^0.1.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -46,6 +44,12 @@ flutter:
     - images/goods2.jpg
     - images/goods03.jpg
     - images/goods4.jpg
+    - images/goods5.png
+    - images/goods6.jpg
+    - images/goods7.jpg
+    - images/goods8.jpg
+    - images/goods9.jpg
+    - images/goods10.jpg
     - images/logo.png
     - images/profile.jpg
     - images/profileimage.png

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fleamarket/TestScreen/ChatMessage.dart';
+import 'package:fleamarket/Screen/ChatMessage.dart';
 
 class ChartScreen extends StatefulWidget {
   @override
@@ -16,6 +16,7 @@ class ChatScreenState extends State<ChartScreen> with TickerProviderStateMixin{
     return new Scaffold(
       appBar: new AppBar(
         title: new Text("friendlyChat"),
+        backgroundColor: Colors.orangeAccent,
       ),
       body: new Column(
         children: <Widget>[

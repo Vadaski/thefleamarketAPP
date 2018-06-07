@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fleamarket/TestScreen/ChatScreen.dart';
+import 'package:fleamarket/Screen/ChatScreen.dart';
 class FriendlyChat extends StatelessWidget{
   @override
   Widget build(BuildContext context) {

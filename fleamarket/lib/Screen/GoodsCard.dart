@@ -5,7 +5,18 @@ import 'package:fleamarket/Screen/ShowGoodsScreen.dart';
 
 class GoodsCard extends StatelessWidget {
 
+  GoodsCard({
+    Key key,
+    this.image,
+    this.title,
+    this.subTitle,
+    this.price
+  });
 
+  Image image;
+  String title;
+  String subTitle;
+  int price;
 
   @override
   Widget build(BuildContext context) {
@@ -25,12 +36,14 @@ class GoodsCard extends StatelessWidget {
             child: new Column(
               children: <Widget>[
                 new Container(
-                  child: new Image.asset('images/goods4.jpg'),
+//                  child: new Image.asset('images/goods4.jpg'),
+                child: image,
                 ),
 //                new Divider(),
                 new ListTile(
-                  title: new Text('Title'),
-                  subtitle: new Text('subTitle'),
+                  leading: new Icon(Icons.add_shopping_cart),
+                  title: new Text(title),
+                  subtitle: new Text(subTitle+"     \$"+price.toString()),
                 )
               ],
             ),

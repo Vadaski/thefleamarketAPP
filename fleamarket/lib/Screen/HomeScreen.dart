@@ -17,6 +17,7 @@ class HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
+
   }
 
   @override
@@ -24,7 +25,7 @@ class HomeScreenState extends State<HomeScreen> {
     return new Scaffold(
       appBar: new AppBar(
 //        title: _buildTextComposer(),
-        backgroundColor: Colors.orangeAccent,
+        backgroundColor: Colors.black54,
         flexibleSpace: new Padding(
           padding: const EdgeInsets.all(8.0),
           child: new Container(
@@ -54,11 +55,54 @@ class HomeScreenState extends State<HomeScreen> {
       body: new RefreshIndicator(
           child: new ListView(
             children: <Widget>[
-              new GoodsCard(),
-              new GoodsCard(),
-              new GoodsCard(),
-              new GoodsCard(),
-              new GoodsCard(),
+              new GoodsCard(
+                image: new Image.asset('images/goods6.jpg'),
+                title: 'SUPERME TSHIRT',
+                subTitle: '夏季爆款猫头T',
+                price: 299,
+              ),
+              new GoodsCard(
+                image: new Image.asset('images/goods7.jpg'),
+                title: '手作 COOKIE',
+                subTitle: '山下小姐手作饼干',
+                price: 66,
+              ),
+              new GoodsCard(
+                image: new Image.asset('images/goods2.jpg'),
+                title: '日清速食料理',
+                subTitle: '包邮哦，现在下单买一送一',
+                price: 6,
+              ),
+              new GoodsCard(
+                image: new Image.asset('images/goods03.jpg'),
+                title: 'WE SUMMER夏日特卖',
+                subTitle: '限时贩售',
+                price: 388,
+              ),
+              new GoodsCard(
+                image: new Image.asset('images/goods4.jpg'),
+                title: 'LOGO MANIA',
+                subTitle: 'BOLD.BRANDED AND BACK IN VOICE',
+                price: 3999,
+              ),
+              new GoodsCard(
+                image: new Image.asset('images/goods5.png'),
+                title: 'COSMETIQUES NATURELS & BIO',
+                subTitle: '空气清新剂',
+                price: 10,
+              ),
+              new GoodsCard(
+                image: new Image.asset('images/goods8.jpg'),
+                title: 'AIGNER WATCH',
+                subTitle: 'AIGNER SEASON SII',
+                price: 8999,
+              ),
+              new GoodsCard(
+                image: new Image.asset('images/goods1.jpg'),
+                title: '星巴克',
+                subTitle: '星巴克碎冰冰',
+                price: 25,
+              ),
             ],
           ),
           onRefresh: () async {
@@ -118,4 +162,5 @@ class HomeScreenState extends State<HomeScreen> {
       ));
     });
   }
+
 }
